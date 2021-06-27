@@ -11,12 +11,15 @@ class NavBar extends Component {
     }
     render() {
       return( 
-          <nav className="navbar-fixed-top navbar navbar-default">
-          <div className="container container-fluid">
-            <button onClick={this.handleNavButtonClick} type="button" className="btn btn-default navbar-btn">login</button>
-            <button className="btn btn-default navbar-btn"> another button </button>
-          </div>
-          </nav>
+     <nav className=" navbar navbar-dark bg-secondary navbar-expand">
+        <div className="container container-fluid">
+          <ul className="navbar-nav justify-content-end">
+            <li className="nav-item"><a href="/#" className="font-weight-bold nav-link">Register</a></li>
+            <li className="nav-item"><a href="/#" className="nav-link">Log In</a></li>
+          </ul>
+        </div>
+
+      </nav>
       )};
 }
 
