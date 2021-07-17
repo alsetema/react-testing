@@ -3,23 +3,30 @@ import React, { Component } from 'react';
 class NavBar extends Component {
 
 
-    state = {}
+    state = {
+    }
     
     handleNavButtonClick = () => {
         console.log("the button has been pressed");
         console.log("checking for this: " + this);
     }
     render() {
-      return( 
-     <nav className=" navbar navbar-dark bg-secondary navbar-expand">
-        <div className="container container-fluid">
-          <ul className="navbar-nav justify-content-end">
-            <li className="nav-item"><a href="/#" className="font-weight-bold nav-link">Register</a></li>
-            <li className="nav-item"><a href="/#" className="nav-link">Log In</a></li>
-          </ul>
-        </div>
+        
+      const buttons = ["Register","Login","About Us","Location", 3];
 
+      return( 
+          <div className="container-fluid">
+     <nav className="navbar nav-pills navbar-dark bg-dark navbar-expand-sm justify-content-end">
+          <ul className="navbar-nav">
+            {buttons.map(
+                function(name,index){
+                    return <li className="nav-item" key={ index }><a href="#" className="nav-link pr-4">{name}</a></li>;
+                })
+            }
+
+          </ul>
       </nav>
+          </div>
       )};
 }
 
