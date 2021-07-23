@@ -1,14 +1,21 @@
 import React from 'react';
 import './App.css';
-import NavBar from './components/navBar';
-import ContentView from './components/contentview';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Welcome from './components/welcome';
+import Navbar from './components/navbar';
+import Register from './components/register';
 
 function App() {
   return (
-      <>
-      <NavBar></NavBar>
-      <ContentView></ContentView>
-      </>
+      <div className="App">
+      <Router>
+      <Navbar />
+      <Switch>
+        <Route path="/" component={Welcome} exact />
+        <Route path="/register" component={Register} />
+      </Switch>
+      </Router>
+      </div>
   );
 }
 

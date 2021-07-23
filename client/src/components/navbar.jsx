@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
-class NavBar extends Component {
+class Navbar extends Component {
 
 
     state = {
@@ -18,10 +19,17 @@ class NavBar extends Component {
           <div className="container-fluid bg-dark">
      <nav className="navbar nav-pills navbar-dark bg-dark navbar-expand-sm justify-content-end">
           <ul className="navbar-nav">
-            {buttons.map(
-                function(name,index){
-                    return <li className="nav-item pe-4" key={ index }><a href="#" className="nav-link">{name}</a></li>;
-                })
+            {
+            buttons.map((value,index) => {
+                return (
+                    <li className="nav-item pe-4" key={index}>
+                        <Link className="nav-link" to={"/"+value.toLowerCase()}>{value}</Link>
+                    </li>
+                )
+            }
+                
+            )
+                
             }
 
           </ul>
@@ -30,5 +38,5 @@ class NavBar extends Component {
       )};
 }
 
-export default NavBar;
+export default Navbar;
 
