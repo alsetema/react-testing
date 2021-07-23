@@ -12,21 +12,21 @@ class NavBar extends Component {
     }
     render() {
         
-      const buttons = ["Register","Login","About Us","Location", 3];
+      const buttons = ["Register","Login","About Us","Location"];
 
       return( 
-          <div className="container-fluid">
+          <div className="container-fluid bg-dark">
      <nav className="navbar nav-pills navbar-dark bg-dark navbar-expand-sm justify-content-end">
           <ul className="navbar-nav">
             {buttons.map(
                 function(name,index){
-                    return <li className="nav-item" key={ index }><a href="#" className="nav-link pr-4">{name}</a></li>;
+                    return <li className="nav-item pe-4" key={ index }><a href="#" className="nav-link">{name}</a></li>;
                 })
             }
 
           </ul>
       </nav>
-          </div>
+      </div>
       )};
 }
 

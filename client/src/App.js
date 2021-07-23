@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/navBar';
-import Register from './components/register';
+import ContentView from './components/contentview';
 
 function App() {
   return (
-      <div>
+      <>
       <NavBar></NavBar>
-      <Register></Register>
-      </div>
+      <ContentView></ContentView>
+      </>
   );
 }
 

@@ -1,4 +1,3 @@
-@import 'bootstrap/dist/css/bootstrap.css';
 
 .App {
   text-align: center;
@@ -43,7 +42,4 @@ body {
     padding-bottom: 70px;
 }
 
-.navbar-nav > li{
-    display: inline-block;
-}
 
